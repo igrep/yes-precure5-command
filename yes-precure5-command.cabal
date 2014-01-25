@@ -1,0 +1,27 @@
+name:              vm-backup-snapshot
+version:           0.0.0
+license:           MIT
+license-file:      LICENSE.txt
+author:            YAMAMOTO Yuji
+maintainer:        YAMAMOTO Yuji <whosekiteneverfly@gmail.com>
+synopsis:          Extended yes command to reproduce phrases in Yes! Precure 5
+description:       Extended yes command to reproduce phrases in Yes! Precure 5
+category:          ACME
+stability:         Experimental
+cabal-version:     >= 1.8
+build-type:        Simple
+homepage:          https://github.com/igrep/yes-precure5-command/
+
+source-repository head
+  type: git
+  location: https://github.com/igrep/yes-precure5-command.git
+
+executable yes
+  buildable: True
+  ghc-options: -Wall
+  main-is: main.hs
+
+  build-depends:
+      base >= 4.0
+    , Cabal >= 1.18
+    , text
