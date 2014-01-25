@@ -24,4 +24,4 @@ executable yes
   build-depends:
       base >= 4.0
     , Cabal >= 1.18
-    , text
+    , random
