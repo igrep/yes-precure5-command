@@ -1,7 +1,7 @@
-name:              vm-backup-snapshot
+name:              yes-precure5-command
 version:           0.0.0
 license:           MIT
-license-file:      LICENSE.txt
+license-file:      LICENSE
 author:            YAMAMOTO Yuji
 maintainer:        YAMAMOTO Yuji <whosekiteneverfly@gmail.com>
 synopsis:          Extended yes command to reproduce phrases in Yes! Precure 5
