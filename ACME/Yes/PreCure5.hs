@@ -3,7 +3,6 @@ module ACME.Yes.PreCure5 where
 import System.Random
 import Text.Parsec
 import Text.Parsec.String
-import Control.Applicative ( (<$>), (<*>) )
 
 data PreCure5 =
   CureDream | CureRouge | CureLemonade | CureMint | CureAqua
@@ -34,7 +33,11 @@ isPreCure5 :: String -> Bool
 isPreCure5 = isRight . parse precure5 "The argument"
 
 precure5 :: Parser String
-precure5 = (++) <$> (string "プリキュア" <|> string "PreCure") <*> (string "5" <|> string "５")
+precure5 = do
+  precure <- (string "プリキュア" <|> string "PreCure")
+  spaces
+  five <- (string "5" <|> string "５")
+  return $ precure ++ five
 
 isRight :: Either a b -> Bool
 isRight (Right _) = True
