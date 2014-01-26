@@ -16,12 +16,31 @@ source-repository head
   type: git
   location: https://github.com/igrep/yes-precure5-command.git
 
-executable yes
-  buildable: True
+library
   ghc-options: -Wall
-  main-is: main.hs
-
+  exposed-modules: ACME.Yes.PreCure5
   build-depends:
       base >= 4.0
     , Cabal >= 1.18
     , random
+    , parsec >= 3.0
+
+executable yes
+  buildable: True
+  ghc-options: -Wall
+  main-is: main.hs
+  build-depends:
+      base >= 4.0
+    , Cabal >= 1.18
+    , yes-precure5-command
+
+test-suite spec
+  type:           exitcode-stdio-1.0
+  hs-source-dirs: test
+  ghc-options:    -Wall
+  main-is:        Spec.hs
+  other-modules:  ACME.Yes.PreCure5Spec
+  build-depends:
+      base
+    , hspec >= 1.3
+    , yes-precure5-command
