@@ -10,7 +10,7 @@ spec = do
     it "is not to be blank" $
       "" `shouldSatisfy` (not . isPreCure5)
 
-    forM_ ["プリキュア5", "プリキュア５", "PreCure 5"] itIsPreCure5
+    forM_ ["プリキュア5", "プリキュア５", "PreCure 5", "Precure 5", "precure 5", "PRECURE 5"] itIsPreCure5
 
 itIsPreCure5 :: String -> Spec
 itIsPreCure5 s =
