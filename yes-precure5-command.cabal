@@ -20,7 +20,7 @@ library
   ghc-options: -Wall
   exposed-modules: ACME.Yes.PreCure5
   build-depends:
-      base >= 4.0
+      base == 4.*
     , Cabal >= 1.18
     , random
     , parsec >= 3.0
@@ -31,7 +31,7 @@ executable yes
   ghc-options: -Wall
   main-is: main.hs
   build-depends:
-      base >= 4.0
+      base == 4.*
     , Cabal >= 1.18
     , yes-precure5-command
     , mtl
@@ -45,6 +45,6 @@ test-suite spec
   main-is:        Spec.hs
   other-modules:  ACME.Yes.PreCure5Spec
   build-depends:
-      base
+      base == 4.*
     , hspec >= 1.3
     , yes-precure5-command
