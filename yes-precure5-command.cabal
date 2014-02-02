@@ -24,6 +24,7 @@ library
     , Cabal >= 1.18
     , random
     , parsec >= 3.0
+    , mtl
 
 executable yes
   buildable: True

@@ -1,9 +1,16 @@
-module ACME.Yes.PreCure5 where
+module ACME.Yes.PreCure5
+  ( PreCure5(..)
+  , introducesHerselfAs
+  , transformationPhraseOf
+  , isPreCure5
+  , chooseTransformationPhrase
+  ) where
 
 import System.Random
-import Text.Parsec
+import Text.Parsec hiding (State)
 import Text.Parsec.String
 import Data.Char
+import Control.Monad.State
 
 data PreCure5 =
   CureDream | CureRouge | CureLemonade | CureMint | CureAqua
@@ -14,6 +21,9 @@ instance Random PreCure5 where
     let (p, g') = randomR (fromEnum a, fromEnum b) g
         in (toEnum p, g')
   random = randomR (minBound, maxBound)
+
+allPrecures :: [PreCure5]
+allPrecures = [minBound..maxBound]
 
 introducesHerselfAs :: PreCure5 -> String
 introducesHerselfAs CureDream    = "大いなる希望の力、キュアドリーム！"
@@ -33,6 +43,17 @@ transformationPhraseOf ps =
 isPreCure5 :: String -> Bool
 isPreCure5 = isRight . parse precure5 "The argument"
 
+chooseTransformationPhrase :: RandomGen g => g -> (String, g)
+chooseTransformationPhrase g =
+  (flip runState) g $ do
+    i <- randomRSt (1, 20)
+    p <- randomSt
+    return $ transformationPhraseOf $ fiveOrSinglePreCure i p
+
+fiveOrSinglePreCure :: Int -> PreCure5 -> [PreCure5]
+fiveOrSinglePreCure 5 _ = allPrecures
+fiveOrSinglePreCure _ p = [p]
+
 precure5 :: Parser String
 precure5 = do
   precure <- (string "プリキュア" <|> stringCI "PreCure")
@@ -50,3 +71,9 @@ stringCI = mapM charCI
 isRight :: Either a b -> Bool
 isRight (Right _) = True
 isRight (Left  _) = False
+
+randomRSt :: (RandomGen g, Random a) => (a, a) -> State g a
+randomRSt r = state $ randomR r
+
+randomSt :: (RandomGen g, Random a) => State g a
+randomSt = state random
