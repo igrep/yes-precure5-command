@@ -46,7 +46,7 @@ isPreCure5 = isRight . parse precure5 "The argument"
 chooseTransformationPhrase :: RandomGen g => g -> (String, g)
 chooseTransformationPhrase g =
   (flip runState) g $ do
-    i <- randomRSt (1, 20)
+    i <- randomRSt (1, 5)
     p <- randomSt
     return $ transformationPhraseOf $ fiveOrSinglePreCure i p
 
