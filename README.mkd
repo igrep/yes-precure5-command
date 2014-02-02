@@ -1,0 +1,41 @@
+# Yes! PreCure 5 Command! ver. 5
+
+Provides extended yes command to reproduce phrases in Yes! Precure 5
+
+## Usage
+
+Calling `yes PreCure 5` generates one of the transformation phrase of
+the Japanese battle heroine Yes! PreCure 5 <http://en.wikipedia.org/wiki/Yes!_PreCure_5>
+
+    $ yes PreCure 5
+    プリキュア！メタモルフォーゼ！
+    大いなる希望の力、キュアドリーム！
+    希望の力と未来の光！
+    華麗に羽ばたく5つの心！Yes！プリキュア5！
+
+    プリキュア！メタモルフォーゼ！
+    大いなる希望の力、キュアドリーム！
+    ...
+
+Of course, some other expressions such as `yes プリキュア5` and `yes Precure5` behave same.
+
+Given no arguments or some non-PreCure 5 expression, the `yes` command behaves like the Unix's `yes` command.
+
+    $ yes
+    y
+    y
+    y
+    ...
+
+    $ yes 高須クリニック
+    高須クリニック
+    高須クリニック
+    高須クリニック
+    ...
+
+## See Also
+
+* Yes! PreCure 5 - Wikipedia, the free encyclopedia <http://en.wikipedia.org/wiki/Yes!_PreCure_5>
+* Yes！プリキュア5 -東映アニメーション- <http://www.toei-anim.co.jp/tv/yes_precure5/>
+* Yes ! Pretty Cure 5 DVD /HQ/ Group Transformation <http://www.youtube.com/watch?v=wxH7h3D31ho>
+* Or search YouTube(TM) with "yes precure 5 transformation" <http://www.youtube.com/results?search_query=yes%20precure%205%20transformations&sm=1>
