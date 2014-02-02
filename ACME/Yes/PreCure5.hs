@@ -2,8 +2,10 @@ module ACME.Yes.PreCure5
   ( PreCure5(..)
   , introducesHerselfAs
   , transformationPhraseOf
+  , metamorphoseOf
   , isPreCure5
   , chooseTransformationPhrase
+  , chooseMetamorphose
   ) where
 
 import System.Random
@@ -40,6 +42,9 @@ transformationPhraseOf ps =
   ++ "華麗に羽ばたく5つの心！"
   ++ "Yes！プリキュア5！"
 
+metamorphoseOf :: [PreCure5] -> String
+metamorphoseOf = transformationPhraseOf
+
 isPreCure5 :: String -> Bool
 isPreCure5 = isRight . parse precure5 "The argument"
 
@@ -49,6 +54,9 @@ chooseTransformationPhrase g =
     i <- randomRSt (1, 5)
     p <- randomSt
     return $ transformationPhraseOf $ fiveOrSinglePreCure i p
+
+chooseMetamorphose :: RandomGen g => g -> (String, g)
+chooseMetamorphose = chooseTransformationPhrase
 
 fiveOrSinglePreCure :: Int -> PreCure5 -> [PreCure5]
 fiveOrSinglePreCure 5 _ = allPrecures

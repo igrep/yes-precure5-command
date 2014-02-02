@@ -20,7 +20,7 @@ possiblyMetamorphose g s =
   if isPreCure5 s
     then metamorphose ++ "\n"
     else generateLine s
-  where (metamorphose, _) = chooseTransformationPhrase g
+  where (metamorphose, _) = chooseMetamorphose g
 
 generateLine :: String -> String
 generateLine "" = "y"
