@@ -34,6 +34,9 @@ executable yes
       base >= 4.0
     , Cabal >= 1.18
     , yes-precure5-command
+    , mtl
+    , parsec >= 3.0
+    , random
 
 test-suite spec
   type:           exitcode-stdio-1.0
