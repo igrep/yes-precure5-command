@@ -2,15 +2,26 @@ module Main where
 
 import Data.List
 import System.Environment
+import System.Random
+
+import ACME.Yes.PreCure5
 
 main :: IO ()
 main = do
-  args <- getArgs
-  putStr $ generateInfinite args
+  arg <- intercalate " " `fmap` getArgs
+  g <- getStdGen
+  putStr $ possibblyInfiniteMetamorphoses g arg
 
-generateInfinite :: [String] -> String
-generateInfinite = unlines . repeat . generateLine
+possibblyInfiniteMetamorphoses :: (RandomGen g) => g -> String -> String
+possibblyInfiniteMetamorphoses g = unlines . repeat . possiblyMetamorphose g
 
-generateLine :: [String] -> String
-generateLine [] = "y"
-generateLine xs = intercalate " " xs
+possiblyMetamorphose :: (RandomGen g) => g -> String -> String
+possiblyMetamorphose g s =
+  if isPreCure5 s
+    then metamorphose
+    else generateLine s
+  where (metamorphose, _) = chooseTransformationPhrase g
+
+generateLine :: String -> String
+generateLine "" = "y"
+generateLine s  = s
