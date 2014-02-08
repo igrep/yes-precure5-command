@@ -8,13 +8,12 @@ synopsis:          Extended yes command to reproduce phrases in Yes! Precure 5
 description:
   Provides extended yes command to reproduce phrases in Yes! Precure 5.
   .
-  See <README.html> for details.
+  See <https://github.com/igrep/yes-precure5-command/blob/master/README.mkd> for details.
 category:          ACME
 stability:         Experimental
 cabal-version:     >= 1.8
 build-type:        Simple
 homepage:          https://github.com/igrep/yes-precure5-command/
-extra-doc-files:  README.html
 
 source-repository head
   type: git
