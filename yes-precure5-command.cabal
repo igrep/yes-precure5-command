@@ -26,6 +26,7 @@ library
       ACME.Yes.PreCure5.Parser
     , ACME.Yes.PreCure5.Profiles
     , ACME.Yes.PreCure5.Random
+    , ACME.Yes.PreCure5.Class
   build-depends:
       base == 4.*
     , Cabal >= 1.18
