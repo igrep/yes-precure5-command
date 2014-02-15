@@ -22,6 +22,10 @@ source-repository head
 library
   ghc-options: -Wall
   exposed-modules: ACME.Yes.PreCure5
+  other-modules:
+      ACME.Yes.PreCure5.Parser
+    , ACME.Yes.PreCure5.Profiles
+    , ACME.Yes.PreCure5.Random
   build-depends:
       base == 4.*
     , Cabal >= 1.18
