@@ -13,6 +13,9 @@ spec = do
     forM_ wordsToBePreCure5GoGo $ \s ->
       it ("is to be " ++ s) $ s `shouldSatisfy` isPreCure5GoGo
 
+    forM_ ["PreCure 5", "Yes! PreCure 5 GoGo", "プリキュア5GoGo! お菓子の国のハッピーバースディ♪"] $ \s ->
+      it ("is not to be " ++ s) $ s `shouldSatisfy` (not . isPreCure5GoGo)
+
 wordsToBePreCure5GoGo :: [String]
 wordsToBePreCure5GoGo = do
   precure <- ["プリキュア", "PreCure", "Precure", "precure", "PRECURE"]
