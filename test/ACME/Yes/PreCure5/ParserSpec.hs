@@ -1,6 +1,6 @@
-module ACME.Yes.PreCure5Spec where
+module ACME.Yes.PreCure5.ParserSpec where
 
-import ACME.Yes.PreCure5
+import ACME.Yes.PreCure5.Parser
 import Test.Hspec
 import Control.Monad
 

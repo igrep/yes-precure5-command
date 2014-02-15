@@ -21,9 +21,9 @@ source-repository head
 
 library
   ghc-options: -Wall
-  exposed-modules: ACME.Yes.PreCure5
-  other-modules:
-      ACME.Yes.PreCure5.Parser
+  exposed-modules:
+      ACME.Yes.PreCure5
+    , ACME.Yes.PreCure5.Parser
     , ACME.Yes.PreCure5.Profiles
     , ACME.Yes.PreCure5.Random
     , ACME.Yes.PreCure5.Class
@@ -53,7 +53,7 @@ test-suite spec
   hs-source-dirs: test
   ghc-options:    -Wall
   main-is:        Spec.hs
-  other-modules:  ACME.Yes.PreCure5Spec
+  other-modules:  ACME.Yes.PreCure5.ParserSpec
   build-depends:
       base == 4.*
     , hspec >= 1.3
