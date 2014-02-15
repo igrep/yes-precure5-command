@@ -4,12 +4,12 @@ module ACME.Yes.PreCure5.GoGo.Parser
 
 import Text.Parsec
 import Text.Parsec.String
-import Data.Char
 
 import ACME.Yes.PreCure5.Parser (precure5)
+import ACME.Yes.PreCure5.Parser.Common
 
 isPreCure5GoGo :: String -> Bool
-isPreCure5GoGo = isRight . parse (precure5gogo >> eof) "The argument"
+isPreCure5GoGo = isFullyConsumedBy precure5gogo
 
 precure5gogo :: Parser String
 precure5gogo = do
@@ -20,14 +20,3 @@ precure5gogo = do
   exclamation <- string "!" <|> string "！" <|> return ""
   spaces
   return $ p5 ++ gogo ++ exclamation
-
-charCI :: Char -> Parser Char
-charCI c | isAlpha c = (char (toUpper c)) <|> (char (toLower c))
-         | otherwise = char c
-
-stringCI :: String -> Parser String
-stringCI = mapM charCI
-
-isRight :: Either a b -> Bool
-isRight (Right _) = True
-isRight (Left  _) = False

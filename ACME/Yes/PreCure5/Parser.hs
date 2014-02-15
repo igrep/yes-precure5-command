@@ -5,10 +5,11 @@ module ACME.Yes.PreCure5.Parser
 
 import Text.Parsec
 import Text.Parsec.String
-import Data.Char
+
+import ACME.Yes.PreCure5.Parser.Common
 
 isPreCure5 :: String -> Bool
-isPreCure5 = isRight . parse (precure5 >> eof) "The argument"
+isPreCure5 = isFullyConsumedBy precure5
 
 precure5 :: Parser String
 precure5 = do
@@ -17,14 +18,3 @@ precure5 = do
   five <- (string "5" <|> string "５")
   spaces
   return $ precure ++ five
-
-charCI :: Char -> Parser Char
-charCI c | isAlpha c = (char (toUpper c)) <|> (char (toLower c))
-         | otherwise = char c
-
-stringCI :: String -> Parser String
-stringCI = mapM charCI
-
-isRight :: Either a b -> Bool
-isRight (Right _) = True
-isRight (Left  _) = False

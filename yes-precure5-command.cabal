@@ -24,6 +24,7 @@ library
   exposed-modules:
       ACME.Yes.PreCure5
     , ACME.Yes.PreCure5.Parser
+    , ACME.Yes.PreCure5.Parser.Common
     , ACME.Yes.PreCure5.Profiles
     , ACME.Yes.PreCure5.Random
     , ACME.Yes.PreCure5.Class
