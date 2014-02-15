@@ -5,7 +5,9 @@ module ACME.Yes.PreCure5.Class
   , allPrecures
   ) where
 
+import Data.Set (Set)
+
 class PreCure p where
   introducesHerselfAs :: p -> String
-  transformationPhraseOf :: [p] -> String
-  allPrecures :: [p]
+  transformationPhraseOf :: Set p -> String
+  allPrecures :: Set p

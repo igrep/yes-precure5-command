@@ -33,6 +33,7 @@ library
     , random
     , parsec >= 3.0
     , mtl
+    , containers
 
 executable yes
   buildable: True
@@ -45,6 +46,7 @@ executable yes
     , mtl
     , parsec >= 3.0
     , random
+    , containers
 
 test-suite spec
   type:           exitcode-stdio-1.0

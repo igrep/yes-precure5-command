@@ -8,12 +8,14 @@ module ACME.Yes.PreCure5.Profiles
 
 import ACME.Yes.PreCure5.Class
 
+import qualified Data.Set as S
+
 data PreCure5 =
   CureDream | CureRouge | CureLemonade | CureMint | CureAqua
-  deriving (Show, Bounded, Enum)
+  deriving (Show, Bounded, Enum, Eq, Ord)
 
 instance PreCure PreCure5 where
-  allPrecures = [minBound..maxBound]
+  allPrecures = S.fromAscList [minBound..maxBound]
 
   introducesHerselfAs CureDream    = "大いなる希望の力、キュアドリーム！"
   introducesHerselfAs CureRouge    = "情熱の赤い炎、キュアルージュ！"
@@ -23,10 +25,10 @@ instance PreCure PreCure5 where
 
   transformationPhraseOf ps =
        "プリキュア！メタモルフォーゼ！\n"
-    ++ (unlines $ map introducesHerselfAs ps)
+    ++ (unlines $ map introducesHerselfAs $ S.toAscList ps)
     ++ "希望の力と未来の光！\n"
     ++ "華麗に羽ばたく5つの心！\n"
     ++ "Yes！プリキュア5！\n"
 
-metamorphoseOf :: [PreCure5] -> String
+metamorphoseOf :: S.Set PreCure5 -> String
 metamorphoseOf = transformationPhraseOf
