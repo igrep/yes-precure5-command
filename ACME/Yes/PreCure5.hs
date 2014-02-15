@@ -39,8 +39,8 @@ transformationPhraseOf ps =
      "プリキュア！メタモルフォーゼ！\n"
   ++ (unlines $ map introducesHerselfAs ps)
   ++ "希望の力と未来の光！\n"
-  ++ "華麗に羽ばたく5つの心！"
-  ++ "Yes！プリキュア5！"
+  ++ "華麗に羽ばたく5つの心！\n"
+  ++ "Yes！プリキュア5！\n"
 
 metamorphoseOf :: [PreCure5] -> String
 metamorphoseOf = transformationPhraseOf

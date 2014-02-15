@@ -18,7 +18,7 @@ possibblyInfiniteMetamorphoses g = unlines . repeat . possiblyMetamorphose g
 possiblyMetamorphose :: (RandomGen g) => g -> String -> String
 possiblyMetamorphose g s =
   if isPreCure5 s
-    then metamorphose ++ "\n"
+    then metamorphose
     else generateLine s
   where (metamorphose, _) = chooseMetamorphose g
 
