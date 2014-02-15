@@ -8,7 +8,7 @@ import Text.Parsec.String
 import Data.Char
 
 isPreCure5 :: String -> Bool
-isPreCure5 = isRight . parse precure5 "The argument"
+isPreCure5 = isRight . parse (precure5 >> eof) "The argument"
 
 precure5 :: Parser String
 precure5 = do
