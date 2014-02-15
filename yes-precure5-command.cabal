@@ -27,6 +27,7 @@ library
     , ACME.Yes.PreCure5.Profiles
     , ACME.Yes.PreCure5.Random
     , ACME.Yes.PreCure5.Class
+    , ACME.Yes.PreCure5.GoGo.Profiles
   build-depends:
       base == 4.*
     , Cabal >= 1.18
@@ -53,8 +54,12 @@ test-suite spec
   hs-source-dirs: test
   ghc-options:    -Wall
   main-is:        Spec.hs
-  other-modules:  ACME.Yes.PreCure5.ParserSpec
+  other-modules:
+      ACME.Yes.PreCure5.ParserSpec
+    , ACME.Yes.PreCure5.GoGo.ProfilesSpec
   build-depends:
       base == 4.*
     , hspec >= 1.3
+    , QuickCheck
+    , containers
     , yes-precure5-command
