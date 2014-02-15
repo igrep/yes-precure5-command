@@ -6,15 +6,20 @@ import Text.Parsec
 import Text.Parsec.String
 import Data.Char
 
-isPreCure5GoGo :: String -> Bool
-isPreCure5GoGo = isRight . parse precure5 "The argument"
+import ACME.Yes.PreCure5.Parser (precure5)
 
-precure5 :: Parser String
-precure5 = do
-  precure <- (string "プリキュア" <|> stringCI "PreCure")
+isPreCure5GoGo :: String -> Bool
+isPreCure5GoGo = isRight . parse (precure5gogo >> eof) "The argument"
+
+precure5gogo :: Parser String
+precure5gogo = do
+  p5 <- precure5
   spaces
-  five <- (string "5" <|> string "５")
-  return $ precure ++ five
+  gogo <- stringCI "GoGo"
+  spaces
+  exclamation <- string "!" <|> string "！" <|> return ""
+  spaces
+  return $ p5 ++ gogo ++ exclamation
 
 charCI :: Char -> Parser Char
 charCI c | isAlpha c = (char (toUpper c)) <|> (char (toLower c))
