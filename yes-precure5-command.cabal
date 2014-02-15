@@ -28,6 +28,7 @@ library
     , ACME.Yes.PreCure5.Random
     , ACME.Yes.PreCure5.Class
     , ACME.Yes.PreCure5.GoGo.Profiles
+    , ACME.Yes.PreCure5.GoGo.Parser
   build-depends:
       base == 4.*
     , Cabal >= 1.18
