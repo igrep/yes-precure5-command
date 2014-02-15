@@ -15,6 +15,7 @@ precure5 = do
   precure <- (string "プリキュア" <|> stringCI "PreCure")
   spaces
   five <- (string "5" <|> string "５")
+  spaces
   return $ precure ++ five
 
 charCI :: Char -> Parser Char
