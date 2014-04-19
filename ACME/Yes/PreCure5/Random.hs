@@ -1,9 +1,9 @@
 {-# OPTIONS_GHC -fno-warn-orphans #-}
 
 module ACME.Yes.PreCure5.Random
-  ( choosePreCure
-  , chooseTransformationPhrase
-  , chooseMetamorphose
+  ( choosePrecureFrom
+  , chooseTransformationPhraseFrom
+  , chooseMetamorphoseFrom
   ) where
 
 import ACME.Yes.PreCure5.Class
@@ -11,23 +11,22 @@ import System.Random
 import Control.Monad.State
 import qualified Data.Set as S
 
-choosePrecure :: (RandomGen g, PreCure p) => g -> (p, g)
-choosePrecure g = (ps !! i, g')
+choosePrecureFrom :: (PreCure p, RandomGen g) => S.Set p -> g -> (p, g)
+choosePrecureFrom pset g = (ps !! i, g')
   where
-    pset = allPrecures
     ps = S.toAscList pset
     (i, g') = randomR (0, l) g
     l = S.size pset - 1
 
-chooseTransformationPhrase :: RandomGen g => g -> (String, g)
-chooseTransformationPhrase g =
+chooseTransformationPhraseFrom :: (PreCure p, RandomGen g) => S.Set p -> g -> (String, g)
+chooseTransformationPhraseFrom pset g =
   (flip runState) g $ do
     i <- randomRSt (1, 5)
-    p <- state choosePrecure
+    p <- state $ choosePrecureFrom pset
     return $ transformationPhraseOf $ fiveOrSinglePreCure i p
 
-chooseMetamorphose :: RandomGen g => g -> (String, g)
-chooseMetamorphose = chooseTransformationPhrase
+chooseMetamorphoseFrom :: (PreCure p, RandomGen g) => S.Set p -> g -> (String, g)
+chooseMetamorphoseFrom = chooseTransformationPhraseFrom
 
 fiveOrSinglePreCure :: (PreCure p) => Int -> p -> S.Set p
 fiveOrSinglePreCure 5 _ = allPrecures
