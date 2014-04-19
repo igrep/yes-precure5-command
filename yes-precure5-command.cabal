@@ -1,12 +1,12 @@
 name:              yes-precure5-command
-version:           5.0.1
+version:           5.5
 license:           MIT
 license-file:      LICENSE
 author:            YAMAMOTO Yuji
 maintainer:        YAMAMOTO Yuji <whosekiteneverfly@gmail.com>
-synopsis:          Extended yes command to reproduce phrases in Yes! Precure 5
+synopsis:          Extended yes command to reproduce phrases in Yes! Precure 5 or Yes! PreCure5 GoGo!
 description:
-  Provides extended yes command to reproduce phrases in Yes! Precure 5.
+  Provides extended yes command to reproduce phrases in Yes! Precure 5 or Yes! PreCure5 GoGo!
   .
   See <https://github.com/igrep/yes-precure5-command/blob/master/README.mkd> for details.
 category:          ACME
