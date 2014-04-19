@@ -1,6 +1,6 @@
-# Yes! PreCure 5 Command! ver. 5
+# Yes! PreCure 5 Command! ver. 5.5
 
-Provides extended yes command to reproduce phrases in Yes! Precure 5
+Provides extended yes command to reproduce phrases in Yes! Precure 5 or Yes! PreCure 5 GoGo!
 
 ## Usage
 
@@ -19,7 +19,17 @@ the Japanese battle heroine Yes! PreCure 5 <http://en.wikipedia.org/wiki/Yes!_Pr
 
 Of course, some other expressions such as `yes プリキュア5` and `yes Precure5` behave same.
 
-Given no arguments or some non-PreCure 5 expression, the `yes` command behaves like the Unix's `yes` command.
+Now, `yes PreCure 5 GoGo` (and `yes プリキュア5 GoGo` etc.) can also generates Milky Rose's transformation phrase.
+
+    $ yes PreCure 5
+    スカイローズ・トランスレイト！
+    青いバラは秘密のしるし！ ミルキィローズ！
+
+    スカイローズ・トランスレイト！
+    青いバラは秘密のしるし！ ミルキィローズ！
+    ...
+
+Given no arguments or some non-PreCure 5 (or non-GoGo) expression, the `yes` command behaves like the Unix's `yes` command.
 
     $ yes
     y
@@ -37,5 +47,9 @@ Given no arguments or some non-PreCure 5 expression, the `yes` command behaves l
 
 * Yes! PreCure 5 - Wikipedia, the free encyclopedia <http://en.wikipedia.org/wiki/Yes!_PreCure_5>
 * Yes！プリキュア5 -東映アニメーション- <http://www.toei-anim.co.jp/tv/yes_precure5/>
+* Yes！プリキュア５GoGo！ -東映アニメーション- <http://www.toei-anim.co.jp/tv/precure5_gogo/>
 * Yes ! Pretty Cure 5 DVD /HQ/ Group Transformation <http://www.youtube.com/watch?v=wxH7h3D31ho>
+* Yes! Precure 5 Go Go! Group Transformation (HQ) <https://www.youtube.com/watch?v=LvqpSLXEtTc>
+* Yes! Pretty Cure 5 GoGo! » Milky Rose Transformation <https://www.youtube.com/watch?v=4HHuGKSrmOw>
 * Or search YouTube(TM) with "yes precure 5 transformation" <http://www.youtube.com/results?search_query=yes%20precure%205%20transformations&sm=1>
+* or "yes precure 5 gogo transformations" <https://www.youtube.com/results?search_query=yes+precure+5+gogo+transformations>
