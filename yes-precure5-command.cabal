@@ -4,7 +4,7 @@ license:           MIT
 license-file:      LICENSE
 author:            YAMAMOTO Yuji
 maintainer:        YAMAMOTO Yuji <whosekiteneverfly@gmail.com>
-synopsis:          Extended yes command to reproduce phrases in Yes! Precure 5 or Yes! PreCure5 GoGo!
+synopsis:          Extended yes command to reproduce phrases in Yes! Precure 5.
 description:
   Provides extended yes command to reproduce phrases in Yes! Precure 5 or Yes! PreCure5 GoGo!
   .
