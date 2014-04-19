@@ -2,6 +2,11 @@
 
 Provides extended yes command to reproduce phrases in Yes! Precure 5 or Yes! PreCure 5 GoGo!
 
+## Installation
+
+1. `$ cabal install yes-precure5-command`
+2. add ~/.cabal/bin/ (or some other directory you installed in) to your $PATH
+
 ## Usage
 
 Calling `yes PreCure 5` generates one of the transformation phrase of
