@@ -21,13 +21,22 @@ source-repository head
 
 library
   ghc-options: -Wall
-  exposed-modules: ACME.Yes.PreCure5
+  exposed-modules:
+      ACME.Yes.PreCure5
+    , ACME.Yes.PreCure5.Parser
+    , ACME.Yes.PreCure5.Parser.Common
+    , ACME.Yes.PreCure5.Profiles
+    , ACME.Yes.PreCure5.Random
+    , ACME.Yes.PreCure5.Class
+    , ACME.Yes.PreCure5.GoGo.Profiles
+    , ACME.Yes.PreCure5.GoGo.Parser
   build-depends:
       base == 4.*
     , Cabal >= 1.18
     , random
     , parsec >= 3.0
     , mtl
+    , containers
 
 executable yes
   buildable: True
@@ -40,14 +49,19 @@ executable yes
     , mtl
     , parsec >= 3.0
     , random
+    , containers
 
 test-suite spec
   type:           exitcode-stdio-1.0
   hs-source-dirs: test
   ghc-options:    -Wall
   main-is:        Spec.hs
-  other-modules:  ACME.Yes.PreCure5Spec
+  other-modules:
+      ACME.Yes.PreCure5.ParserSpec
+    , ACME.Yes.PreCure5.GoGo.ProfilesSpec
   build-depends:
       base == 4.*
     , hspec >= 1.3
+    , QuickCheck
+    , containers
     , yes-precure5-command
