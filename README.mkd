@@ -4,7 +4,7 @@ Provides extended yes command to reproduce phrases in Yes! Precure 5 or Yes! Pre
 
 ## Installation
 
-1. `$ cabal install yes-precure5-command`
+1. `cabal install yes-precure5-command`
 2. add ~/.cabal/bin/ (or some other directory you installed in) to your $PATH
 
 ## Usage
