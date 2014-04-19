@@ -28,6 +28,7 @@ library
     , ACME.Yes.PreCure5.Profiles
     , ACME.Yes.PreCure5.Random
     , ACME.Yes.PreCure5.Class
+    , ACME.Yes.PreCure5.GoGo
     , ACME.Yes.PreCure5.GoGo.Profiles
     , ACME.Yes.PreCure5.GoGo.Parser
   build-depends:
