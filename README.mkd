@@ -20,6 +20,7 @@ Provides extended yes command to reproduce phrases in Yes! Precure 5 or Yes! Pre
     which yes
     # OK if it prints a path such as "/home/you/.local/bin/yes"
     ```
+
 ### With cabal
 
 1. `cabal install yes-precure5-command`
