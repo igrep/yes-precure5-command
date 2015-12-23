@@ -1,5 +1,5 @@
 name:              yes-precure5-command
-version:           5.5.1
+version:           5.5.2
 license:           MIT
 license-file:      LICENSE
 author:            YAMAMOTO Yuji
@@ -10,7 +10,7 @@ description:
   .
   See <https://github.com/igrep/yes-precure5-command/blob/master/README.mkd> for details.
 category:          ACME
-stability:         Experimental
+stability:         Stable
 cabal-version:     >= 1.8
 build-type:        Simple
 homepage:          https://github.com/igrep/yes-precure5-command/
