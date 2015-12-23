@@ -4,7 +4,7 @@ Provides extended yes command to reproduce phrases in Yes! Precure 5 or Yes! Pre
 
 ## Installation
 
-### (Recommended) With [stack]([commercialhaskell/stack](https://github.com/commercialhaskell/stack))
+### (Recommended) With [stack](https://github.com/commercialhaskell/stack)
 
 1. `stack install yes-precure5-command`
 2. Add ~/.local/bin/ (or some other directory you installed in) to your $PATH
