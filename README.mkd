@@ -38,7 +38,7 @@ Of course, some other expressions such as `yes プリキュア5` and `yes Precur
 
 Now, `yes PreCure 5 GoGo` (and `yes プリキュア5 GoGo` etc.) can also generates Milky Rose's transformation phrase.
 
-    $ yes PreCure 5
+    $ yes PreCure 5 GoGo
     スカイローズ・トランスレイト！
     青いバラは秘密のしるし！ ミルキィローズ！
 
