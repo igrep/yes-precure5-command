@@ -4,5 +4,8 @@ cabal-dev
 *.hi
 *.chi
 *.chs.h
+
+.stack-work
+
 .virthualenv
 cabal.sandbox.config
