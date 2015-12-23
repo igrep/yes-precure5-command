@@ -4,6 +4,24 @@ Provides extended yes command to reproduce phrases in Yes! Precure 5 or Yes! Pre
 
 ## Installation
 
+### (Recommended) With [stack]([commercialhaskell/stack](https://github.com/commercialhaskell/stack))
+
+1. `stack install yes-precure5-command`
+2. Add ~/.local/bin/ (or some other directory you installed in) to your $PATH
+
+    ```bash
+    # e.g.
+    export PATH=~/.local/bin/:$PATH
+    ```
+
+3. Make sure you don't call `yes` command on your system.
+
+    ```bash
+    which yes
+    # OK if it prints a path such as "/home/you/.local/bin/yes"
+    ```
+### With cabal
+
 1. `cabal install yes-precure5-command`
 2. Add ~/.cabal/bin/ (or some other directory you installed in) to your $PATH
 
