@@ -1,9 +1,9 @@
 name:              yes-precure5-command
-version:           5.5.2
+version:           5.5.3
 license:           MIT
 license-file:      LICENSE
-author:            YAMAMOTO Yuji
-maintainer:        YAMAMOTO Yuji <whosekiteneverfly@gmail.com>
+author:            Yuji Yamamoto
+maintainer:        Yuji Yamamoto <whosekiteneverfly@gmail.com>
 synopsis:          Extended yes command to reproduce phrases in Yes! Precure 5.
 description:
   Provides extended yes command to reproduce phrases in Yes! Precure 5 or Yes! PreCure5 GoGo!
@@ -59,6 +59,7 @@ test-suite spec
   main-is:        Spec.hs
   other-modules:
       ACME.Yes.PreCure5.ParserSpec
+      ACME.Yes.PreCure5.GoGo.ParserSpec
     , ACME.Yes.PreCure5.GoGo.ProfilesSpec
   build-depends:
       base == 4.*
